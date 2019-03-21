@@ -4,8 +4,8 @@ function Walker(meanX,meanY,sd) {
   this.sd = sd;
   this.x = xSlider.value();
   this.y = ySlider.value();
-  constrain(x,0,width-1);
-  constrain(y,0,height-1);
+  constrain(this.x,0,width-1);
+  constrain(this.y,0,height-1);
   var stepy;
   var stepx;
 
