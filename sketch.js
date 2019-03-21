@@ -4,7 +4,8 @@ var meanY;
 var sd;
 
 let sdSlider;
-let meanSlider;
+let meanXSlider;
+let meanYSlider;
 let xSlider;
 let ySlider;
 let strokeWeightSlider;
@@ -27,7 +28,7 @@ function setup() {
   ySlider.position(20, 140);
   strokeWeightSlider = createSlider(1,4,2,0);
   strokeWeightSlider.position(20,170);
-  strokeWeight(0);
+  fill(255);
   text('Standard Deviation', sdSlider.x * 2 + sdSlider.width, 35);
   fill(255);
   text('Mean X', meanXSlider.x * 2 + meanXSlider.width, 65);
@@ -39,7 +40,6 @@ function setup() {
   text('Starting Y', ySlider.x * 2 + ySlider.width, 155);
   fill(255);
   text('Stroke Weight', strokeWeightSlider.x * 2 + strokeWeightSlider.width, 185);
-  fill(255);
   button = createButton('reset');
   button.position(20, 195);
   button.mousePressed(reset);
@@ -80,6 +80,5 @@ function reset() {
   fill(255);
   text('Stroke Weight', strokeWeightSlider.x * 2 + strokeWeightSlider.width, 185);
   fill(255);
-  var sw = strokeWeightSlider.value();
   strokeWeight(sw);
 }
